@@ -77,7 +77,7 @@ export const FishingGame: React.FC = () => {
         setUserAnswer('');
 
         try {
-            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+            const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
             const response = await ai.models.generateContent({
                 model: 'gemini-2.5-flash',
                 contents: 'Câu hỏi tiếp theo',
@@ -120,7 +120,7 @@ export const FishingGame: React.FC = () => {
         setUserAnswer(answer);
 
         try {
-            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+            const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
             const prompt = `Câu hỏi là: "${question.question}". Câu trả lời của tôi là: "${answer}". Câu trả lời này đúng hay sai?`;
             const response: GenerateContentResponse = await ai.models.generateContent({
                 model: 'gemini-2.5-flash',
