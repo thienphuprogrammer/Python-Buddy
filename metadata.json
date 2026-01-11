@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Python Buddy Chatbot",
+  "description": "An AI Teaching Assistant chatbot specializing in Python for 10th-grade students. It helps students learn and debug their code by providing guidance and hints instead of direct answers.",
+  "requestFramePermissions": []
+}
